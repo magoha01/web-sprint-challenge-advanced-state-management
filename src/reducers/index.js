@@ -1,7 +1,16 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from '../actions/index';
 
 export const initialState = {
-    smurfs: [],
+    smurfs:
+    [
+        // {
+        //     id:"",
+        //     name:'',
+        //     position:'',
+        //     nickname: '',
+        //     description: ''
+        // }
+    ],
     isLoading: false,
     error: ''
 }
@@ -21,8 +30,8 @@ const reducer = (state=initialState, action)=>{
         case FETCH_SUCCESS:
             return{
                 ...state,
-                smurfs: [...state.smurfs, action.payload],
-                isLoading: false,
+                smurfs: action.payload,
+                isLoading: false, 
                 error: ''
             }; 
 
@@ -33,7 +42,7 @@ const reducer = (state=initialState, action)=>{
                 isLoading: false,
                 error: action.payload
             }; 
-            
+
         default:
             return state;
 
