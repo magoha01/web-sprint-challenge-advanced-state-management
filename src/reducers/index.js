@@ -17,6 +17,7 @@ const reducer = (state=initialState, action)=>{
                 isLoading: true,
                 error: ''
             }; 
+
         case FETCH_SUCCESS:
             return{
                 ...state,
@@ -24,6 +25,7 @@ const reducer = (state=initialState, action)=>{
                 isLoading: false,
                 error: ''
             }; 
+
         case FETCH_FAIL:
             return{
                 ...state,
@@ -31,6 +33,7 @@ const reducer = (state=initialState, action)=>{
                 isLoading: false,
                 error: action.payload
             }; 
+            
         default:
             return state;
 
