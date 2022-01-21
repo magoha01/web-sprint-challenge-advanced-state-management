@@ -8,7 +8,6 @@ export const FETCH_FAIL = "FETCH_FAIL"
     dispatch(fetchStart());
     axios.get('http://localhost:3333/smurfs')
         .then(resp => {
-            //console.log(resp.data)
             dispatch(fetchSuccess(resp.data));
         })
         .catch(err => {

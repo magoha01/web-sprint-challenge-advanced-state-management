@@ -12,11 +12,11 @@ import "./App.css";
 
 const App = (props)=> {
 
-  const { fetchSmurfs, dispatch } = props;
+  const { dispatch } = props
 
   useEffect(()=>{
-   fetchSmurfs();
-}, []);
+   dispatch(fetchSmurfs());
+}, [dispatch]);
 
   return (
     <div className="App">
@@ -30,13 +30,7 @@ const App = (props)=> {
   );
 }
 
-const mapStateToProps = (state) => {
-    return ({
-     appState: state
-    })
-}
-
-export default connect(mapStateToProps, {fetchSmurfs})(App);
+export default connect()(App);
 
 //Task List:
 //1. Connect the fetchSmurfs actions to the App component.

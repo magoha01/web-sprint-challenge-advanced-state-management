@@ -2,15 +2,7 @@ import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from '../actions/index';
 
 export const initialState = {
     smurfs:
-    [
-        // {
-        //     id:"",
-        //     name:'',
-        //     position:'',
-        //     nickname: '',
-        //     description: ''
-        // }
-    ],
+    [],
     isLoading: false,
     error: ''
 }
@@ -42,6 +34,9 @@ const reducer = (state=initialState, action)=>{
                 isLoading: false,
                 error: action.payload
             }; 
+        // case ADD_SMURF:{
+
+        // }
 
         default:
             return state;
