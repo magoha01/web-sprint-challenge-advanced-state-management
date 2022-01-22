@@ -23,8 +23,8 @@ const App = (props)=> {
       <Header />
 
       <main>
-        <SmurfList/>
-        <AddForm/>
+        <SmurfList />
+        <AddForm />
       </main>
     </div>
   );
