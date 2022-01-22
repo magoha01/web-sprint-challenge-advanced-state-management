@@ -27,7 +27,7 @@ const AddForm = (props) => {
         e.preventDefault();
         if (state.name === "" || state.position === "" || state.nickname === "") {
             //dispatch a custom error action
-             return dispatch(setError('ERROR'));
+             return dispatch(setError());
         } else {
             //dispatch an addSmurf action
             return dispatch(addSmurf(state));
@@ -54,7 +54,7 @@ const AddForm = (props) => {
                 <textarea onChange={handleChange} value={state.description} name="description" id="description" />
             </div>
             {
-                {errorMessage} && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {setError} </div>
+                {errorMessage} && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {errorMessage} </div>
             }
             <button>Submit Smurf</button>
         </form>
