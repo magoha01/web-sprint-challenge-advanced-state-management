@@ -4,7 +4,7 @@ import { setError, addSmurf }   from '../actions/index';
 
 const AddForm = (props) => {
 
-    const { errorMessage, setError, addSmurf, dispatch } = props
+    const {dispatch, errorMessage,  } = props
 
     const [state, setState] = useState({
         name:"",
